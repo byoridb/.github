@@ -43,19 +43,19 @@ Vector search recalls a similar paragraph. A graph recalls the reason.
 |---|---|---|
 | 🕸 | **[Byori](https://github.com/byoridb/byori)** | A project-first native multi-agent coding workspace. Run Claude Code and Codex side by side over a shared graph memory. |
 | 🗄 | **[ByoriDB](https://github.com/byoridb/byoridb)** | The graph engine beneath it — a semantic graph database in Rust with nGQL, rule inference, bitemporal history, and provenance. |
-| 🖥 | **[ByoriDB Studio](https://github.com/byoridb/byoridb-studio)** | A desktop manager for browsing, querying, and administering a ByoriDB instance. |
+| 🎬 | **[Byori Studio](https://github.com/byoridb/byoridb-studio)** | A local video editor. Claude Code, Codex and Gemini CLI edit the same timeline through shared tools, and the project's concept and feedback are kept in ByoriDB. |
 
 ```text
-        Claude Code · Codex
-                 │  MCP + skills
-                 ▼
-              Byori            multi-agent coding workspace
-                 │  pinned HTTP/nGQL contract
-                 ▼
-             ByoriDB           semantic graph database
-                 │
-                 ▼
-         ByoriDB Studio        visual management
+   Claude Code · Codex · Gemini CLI
+        │  MCP + skills        │  MCP tools
+        ▼                      ▼
+      Byori               Byori Studio
+ multi-agent coding       local video editor
+     workspace            with creative memory
+        │  pinned HTTP/nGQL    │  optional, local
+        └──────────┬───────────┘
+                   ▼
+                ByoriDB        semantic graph database
 ```
 
 Dependencies flow in one direction only. ByoriDB knows nothing about Byori; Byori installs
