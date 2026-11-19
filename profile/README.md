@@ -1,80 +1,78 @@
+**English** | [한국어](https://github.com/byoridb/.github/blob/main/profile/README.ko.md)
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/byoridb/.github/main/profile/byori-app-icon.png" width="140" alt="Byori">
 </p>
 
 <h1 align="center">BYORI</h1>
 
-<p align="center"><b>Coding agents that remember why.</b></p>
+<p align="center"><b>Connect what you know. Create with AI.</b></p>
 
 <p align="center">
-  Open-source tools for building software with AI agents that keep the project's
-  decisions, causes, and history instead of relearning them every session.
+  ByoriDB is your personal ontology database.<br>
+  Byori and Byori Studio put it to work in coding and video editing with AI.
+</p>
+
+<p align="center">
+  <a href="#byoridb">Connect your knowledge</a> ·
+  <a href="#byori">Develop with multiple agents</a> ·
+  <a href="#byori-studio">Edit with AI</a>
 </p>
 
 ---
 
-## The problem we work on
+## ByoriDB
 
-```text
-Session 1 — Claude Code
-  ✓ found the bug   ✓ fixed it   ✓ explained why it had to be that way
+### Your knowledge, connected on your terms.
 
-A month later — new session, maybe a different agent
-  "I have no memory of this project."
+Which sources informed a project? How does one idea lead to another? Connect
+the information you keep so you can follow those relationships when you need them.
 
-The same moment, with Byori
-  "I remember. This bug came from decision #42, which superseded #17.
-   Option B was rejected after incident #18."
-```
+ByoriDB is a personal ontology database that runs on your own computer. Define
+the concepts and relationships that make sense to you, then link your sources,
+ideas, and projects. Use rules to infer further connections and inspect the
+reasoning behind them.
 
-A longer context window does not fix this. What gets lost is not text — it is the
-chain that explains the code:
+[Build your ontology with ByoriDB →](https://github.com/byoridb/byoridb)
 
-```text
-incident ──caused_by──> bug ──fixed_by──> decision ──affects──> module
-                                      └──supersedes──> previous decision
-```
+## Byori
 
-Vector search recalls a similar paragraph. A graph recalls the reason.
+### Develop with multiple coding agents in one place.
 
-## The ecosystem
+Give Claude Code a new feature and Codex a separate bug to fix. Choose an agent
+for each task and keep both moving at once.
 
-| | Project | What it is |
-|---|---|---|
-| 🕸 | **[Byori](https://github.com/byoridb/byori)** | A project-first native multi-agent coding workspace. Run Claude Code and Codex side by side over a shared graph memory. |
-| 🗄 | **[ByoriDB](https://github.com/byoridb/byoridb)** | The graph engine beneath it — a semantic graph database in Rust with nGQL, rule inference, bitemporal history, and provenance. |
-| 🖥 | **[ByoriDB Studio](https://github.com/byoridb/byoridb-studio)** | A desktop manager for browsing, querying, and administering a ByoriDB instance. |
+Byori is a native macOS workspace for multiple coding agents, built on ByoriDB.
+Organize tasks and terminals by project, and give each task its own Git worktree
+to keep code changes separate. Move between sessions, review the work, and
+decide what to merge.
 
-```text
-        Claude Code · Codex
-                 │  MCP + skills
-                 ▼
-              Byori            multi-agent coding workspace
-                 │  pinned HTTP/nGQL contract
-                 ▼
-             ByoriDB           semantic graph database
-                 │
-                 ▼
-         ByoriDB Studio        visual management
-```
+ByoriDB's ontology connects your project's code, design decisions, bug causes,
+and fixes. Your agents can follow those relationships to find which decision
+affects a module and why it was made. When you bring another agent into the
+work, that connected knowledge is there to draw on.
 
-Dependencies flow in one direction only. ByoriDB knows nothing about Byori; Byori installs
-and manages a validated engine release.
+[Get started with Byori →](https://github.com/byoridb/byori)
 
-## Quick start
+## Byori Studio
 
-```bash
-curl -fsSL https://github.com/byoridb/byori/releases/latest/download/install.sh | bash
-```
+### Edit videos with AI.
 
-This installs a local single-node ByoriDB, registers the MCP server with the coding CLIs it
-detects, and installs the memory skill. Everything stays on your machine — the data files and
-the MCP process are local.
+“Trim the start of this clip.” “Add a caption here.” Ask AI for the changes
+you want, then fine-tune them on the timeline.
 
-> [!WARNING]
-> These are early projects under active development. Do not use them as the only copy of
-> important data.
+Byori Studio is a desktop video editor built on ByoriDB, where you work with
+Claude Code and Codex. Cut and arrange footage, add captions and music, and
+export your video in one place. Review the AI's edits, adjust them yourself,
+or undo them.
 
-## License
+Use ByoriDB's ontology to keep creative context connected to the edit: the
+concept and audience for a project, the feedback attached to a clip. Your AI
+can refer to what a scene needs to convey and why you're changing it, carrying
+that intent into the next edit.
 
-Apache-2.0 across the ecosystem.
+[Start with Byori Studio →](https://github.com/byoridb/byoridb-studio)
+
+---
+
+Open source · Apache-2.0. Each repository has setup instructions and current requirements.
